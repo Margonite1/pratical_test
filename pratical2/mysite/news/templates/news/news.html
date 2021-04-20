@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>News</title>
+</head>
+<body>
+ <h1>News</h1>
+ <div>
+{% if News_items %}
+<ul>
+{% for news in News_items %}
+<h2>{{ news.title }}</h2>
+<p>{{ news.pub_date }}
+    <br> {{ news.text }} </p>
+{% endfor %}
+</ul>
+{% else %}
+<strong>There is no news present.</strong>
+{% endif %}
+</div>
+ </body>
+
+</html>
